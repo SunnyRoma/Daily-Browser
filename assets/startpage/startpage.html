@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Browser Start</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #a8e063 0%, #43a047 100%);
+            color: #222;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .logo {
+            font-size: 48px;
+            color: #43a047;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 8px #a8e06388;
+        }
+        .search-box {
+            display: flex;
+            width: 400px;
+            margin-bottom: 30px;
+        }
+        .search-box input {
+            flex: 1;
+            padding: 12px;
+            font-size: 18px;
+            border: 2px solid #43a047;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+            background: #a8e063;
+            color: #222;
+        }
+        .search-box button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background: #43a047;
+            color: #fff;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+        }
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 800px;
+        }
+        .quick-link {
+            width: 100px;
+            height: 100px;
+            background: #43a047;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px #0002;
+            text-align: center;
+        }
+        .quick-link:hover {
+            background: #a8e063;
+            color: #222;
+        }
+        .add-shortcut {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #222;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .add-shortcut-btn {
+            width: 56px;
+            height: 56px;
+            background: #006064;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #fff;
+            border: none;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 8px #0002;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .add-shortcut-btn:hover {
+            background: #00838f;
+        }
+        .add-shortcut-label {
+            color: #fff;
+            font-size: 14px;
+            text-shadow: 0 1px 4px #0005;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">Daily Browser</div>
+    <form class="search-box" action="https://www.google.com/search" method="get" target="_self">
+        <input type="text" name="q" placeholder="Поиск в Google..." autofocus>
+        <button type="submit">Найти</button>
+    </form>
+    <div class="quick-links">
+        <a href="addshortcut://" class="add-shortcut">
+            <div class="add-shortcut-btn">+</div>
+            <div class="add-shortcut-label">Добавить ярлык</div>
+        </a>
+    </div>
+</body>
+</html>
